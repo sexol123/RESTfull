@@ -1,0 +1,47 @@
+<md-dialog>
+    <form ng-cloak>
+ 
+        <!-- dialog box title -->
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Update Record</h2>
+            </div>
+        </md-toolbar>
+ 
+        <md-dialog-content>
+            <div class="md-dialog-content">
+ 
+                <!-- dialog box input fields with editable product information -->
+                <md-input-container class="md-block">
+                    <label>Id</label>
+                    <input ng-model="message" disabled>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Host</label>
+                    <input ng-model="host">
+                </md-input-container>
+ 
+                <md-input-container class="md-block">
+                    <label>Code</label>
+                    <input ng-model="code">
+                </md-input-container>
+ 
+                <md-input-container class="md-block">
+                    <label>Message</label>
+                    <input ng-model="message">
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Created</label>
+                    <input ng-model="created">
+                </md-input-container>
+ 
+            </div>
+        </md-dialog-content>
+ 
+        <!-- dialog box buttons -->
+        <md-dialog-actions layout="row">
+            <md-button ng-click="cancel()">Cancel</md-button>
+            <md-button ng-click="updateRecord()" class="md-primary">Update</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

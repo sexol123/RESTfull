@@ -1,0 +1,51 @@
+<div layout="row" ng-controller="recordsController" ng-cloak>
+    <div flex="10"></div>
+ 
+    <div flex="80" class='m-20px-0'>
+ 
+        <!-- page title & 'create record' button -->
+        <md-toolbar class="md-hue-2">
+            <div class="md-toolbar-tools">
+                <!-- page title -->
+                <div flex md-truncate>
+                    <h3 class="md-headline">records</h3>
+                </div>
+ 
+           
+<md-button class="md-raised" ng-click="showCreateRecordForm()">Create</md-button>
+            </div>
+        </md-toolbar>
+ 
+        <!-- 'search' bar will be here -->
+ 
+        <md-content flex>
+            <!-- show record record list -->
+            <md-list ng-init="readRecords()">
+                <md-list-item class="md-3-line" ng-repeat="record in records">
+ 
+                    <!-- record information -->
+                    <div class="md-list-item-text">
+                        <h3>{{record.id}}</h3>
+                        <h4>{{record.host}}</h4>
+                        <p>{{record.code}}</p>
+                        <p>{{record.message}}</p>
+                        <p>{{record.created}}</p>
+                    </div>
+ 
+                    <!-- 'read one', 'edit' and 'delete' buttons -->
+                    <div class="md-secondary-container">
+                        <!-- 'read one' button will be here -->
+                        <md-button class="md-raised md-info" ng-click="readOneRecord(record.id)">Read One</md-button>
+                        <!-- 'edit' button will be here -->
+                        <md-button class="md-raised md-primary" ng-click="showUpdateRecordForm(record.id)">Edit</md-button>
+                        <!-- 'delete' button will be here -->
+                        <md-button class="md-raised md-danger" ng-click="confirmDeleteRecord($event, record.id)">Delete</md-button>
+                    </div>
+                    <md-divider ng-if="!$last"></md-divider>
+                </md-list-item>
+            </md-list>
+        </md-content>
+    </div>
+ 
+    <div flex="10"></div>
+</div> <!-- end row -->

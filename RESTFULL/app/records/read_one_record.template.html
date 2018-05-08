@@ -1,0 +1,45 @@
+<md-dialog>
+    <form ng-cloak>
+ 
+        <!-- dialog box title -->
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Read One Record</h2>
+            </div>
+        </md-toolbar>
+ 
+        <md-dialog-content>
+            <div class="md-dialog-content">
+ 
+                <!-- display Record information -->
+                <md-input-container class="md-block">
+                    <label>id</label>
+                    <input ng-model="id" disabled>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>host</label>
+                    <input ng-model="host" disabled>
+                </md-input-container>
+ 
+                <md-input-container class="md-block">
+                    <label>code</label>
+                    <input ng-model="code" disabled>
+                </md-input-container>
+ 
+                <md-input-container class="md-block">
+                    <label>message</label>
+                    <input ng-model="message" disabled>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>created</label>
+                    <input ng-model="created" disabled>
+                </md-input-container>
+            </div>
+        </md-dialog-content>
+ 
+        <!-- button to close the dialog box -->
+        <md-dialog-actions layout="row">
+            <md-button ng-click="cancel()">Cancel</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>
